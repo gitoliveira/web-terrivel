@@ -6,36 +6,69 @@
   <link rel="stylesheet" href="estilo.css">
 </head>
 <body>
-	<div id="area">
-	<fieldset>
-		<legend>Formulario</legend>
+	<div id="form-post">
 		<form id= "formulario"action="http://terrivel.herokuapp.com/monster" method="POST">
-			<label for="num_pedras">Numero de pedras <asterisco>*</asterisco> </label>
-			<input type="number"  name="num_pedras" id="num_pedras" required="" min="0" step="1"><br>
-			<label for="tam_pedras">Tamanho das pedras <asterisco>*</asterisco> </label>
-			<input type="number" name="tam_pedras" id="tam_pedras" required="" min="0" max="100" step="0.5"><br>
-			<label for="nome">Nome <asterisco>*</asterisco> </label>
-			<input type="text" name="nome" required="" id="tam_pedras"><br>
+			<fieldset>
+				<legend>Formulario</legend>
 
-			<label> Cor 1 </label> <input type="color" name="cor1" value="color">
-			<label> Cor 2 </label> <input type="color" name="cor2" value="color"><br>
+				<label for="num_pedras">Numero de pedras <asterisco>*</asterisco> </label>
+				<input type="number"  name="num_pedras" id="num_pedras" required="" min="0" step="1"><br>
+				<label for="tam_pedras">Tamanho das pedras <asterisco>*</asterisco> </label>
+				<input type="number" placeholder="3" name="tam_pedras" id="tam_pedras" required="" min="0" max="100" step="0.5"><br>
+				<label for="nome">Nome <asterisco>*</asterisco> </label>
+				<input type="text" name="nome" required="" id="tam_pedras"><br>
 
-			<label for="tipo_pedras">Tipo Pedras Sortidas:</label>
-			<label><input name="tipo_pedras_sortidas" type="radio" value="sim">Sim</label>
-			<label><input name="tipo_pedras_sortidas" type="radio" selected="" value="nao">Nao</label><br>
+				<label> Cor 1 </label> <input type="color" name="cor1" value="color"><br>
+				<label> Cor 2 </label> <input type="color" name="cor2" value="color"><br>
 
-			<label for="tipo_pedras">Tipo Pedras:</label>
-			<select name="tipo_pedras" id="tipo_pedras">
-			  <option value="marroada" selected="">Marroada</option>
-			  <option value="ametista">Ametista</option>
-			  <option value="topazio"> Topazio</option>
-			  <option value="espinelaa">Espinela</option>
-			</select> <br>
+				<label for="tipo_pedras">Tipo Pedras Sortidas:</label><br>
+				<label><input name="tipo_pedras_sortidas" type="radio" value="sim">Sim</label><br>
+				<label><input name="tipo_pedras_sortidas" type="radio" selected="" value="nao">Nao</label><br><br>
+
+				<label for="tipo_pedras">Tipo Pedras:</label>
+				<select name="tipo_pedras" id="tipo_pedras">
+				  <option value="marroada">Marroada</option>
+				  <option value="ametista">Ametista</option>
+				  <option value="topazio"> Topazio</option>
+				  <option value="espinelaa">Espinela</option>
+				</select> <br>
+			</fieldset>
 			<input type="submit" value="Enviar via POST">
 			<button type="reset">Limpar</button>
 		</form>
-	</fieldset>
-</div>
+	</div>
+
+	<div id="form-get">
+		<form id= "formulario"action="http://terrivel.herokuapp.com/monster" method="GET">
+			<fieldset>
+				<legend>Formulario</legend>
+
+				<label for="num_pedras">Numero de pedras <asterisco>*</asterisco> </label>
+				<input type="number"  name="num_pedras" id="num_pedras" required="" min="0" step="1"><br>
+				<label for="tam_pedras">Tamanho das pedras <asterisco>*</asterisco> </label>
+				<input type="number" placeholder="3" name="tam_pedras" id="tam_pedras" required="" min="0" max="100" step="0.5"><br>
+				<label for="nome">Nome <asterisco>*</asterisco> </label>
+				<input type="text" name="nome" required="" id="tam_pedras"><br>
+
+				<label> Cor 1 </label> <input type="color" name="cor1" value="color"><br>
+				<label> Cor 2 </label> <input type="color" name="cor2" value="color"><br>
+
+				<label for="tipo_pedras">Tipo Pedras Sortidas:</label><br>
+				<label><input name="tipo_pedras_sortidas" type="radio" value="sim">Sim</label><br>
+				<label><input name="tipo_pedras_sortidas" type="radio" selected="" value="nao">Nao</label><br><br>
+
+				<label for="tipo_pedras">Tipo Pedras:</label>
+				<select name="tipo_pedras" id="tipo_pedras">
+				  <option value="marroada" selected="">Marroada</option>
+				  <option value="ametista">Ametista</option>
+				  <option value="topazio"> Topazio</option>
+				  <option value="espinelaa">Espinela</option>
+				</select> <br>
+			</fieldset>
+			<input type="submit" value="Enviar via GET">
+			<button type="reset">Limpar</button>		
+			</form>
+	</div>
 
 </body>
 </html>
